@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#13243a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mi Dinero">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Mi Dinero · Control doméstico</title>
+<style>
+:root{--navy:#13243a;--gold:#b99a5b;--bg:#f4f6f8;--card:#fff;--ink:#172333;--muted:#687586;--line:#e1e6eb;--green:#16794b;--red:#b42318;--radius:18px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+header{background:var(--navy);color:white;padding:calc(18px + env(safe-area-inset-top)) 18px 20px;border-radius:0 0 24px 24px}
+.brand{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#e0c98f;font-weight:700}.headrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:7px}h1{font-size:25px;margin:0;font-weight:750}#cloudStatus{font-size:11px;border:1px solid #ffffff55;border-radius:999px;padding:6px 9px;color:#e8edf3}
+main{max-width:760px;margin:0 auto;padding:14px}.monthbar{display:flex;gap:8px;align-items:center;margin:2px 0 14px}.monthbar select{flex:1}.pill{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 12px;font:inherit;color:var(--ink);min-width:0}button{font:inherit;cursor:pointer;border:0;border-radius:12px;padding:11px 14px;background:var(--navy);color:#fff;font-weight:650}button.secondary{background:#e9edf2;color:var(--navy)}button.ghost{background:transparent;border:1px solid var(--line);color:var(--navy)}button.danger{background:#fff0ef;color:var(--red)}button.small{padding:7px 10px;font-size:12px}.tabs{display:flex;overflow:auto;gap:7px;padding:2px 0 12px}.tab{white-space:nowrap;background:#e8ecf1;color:#4a5666;padding:9px 13px;border-radius:999px;font-size:13px}.tab.active{background:var(--navy);color:#fff}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px;margin-bottom:12px;box-shadow:0 2px 7px #12243a08}.metric .label{font-size:12px;color:var(--muted)}.metric .value{font-size:22px;font-weight:760;margin-top:7px;overflow-wrap:anywhere}.metric .sub{font-size:11px;color:var(--muted);margin-top:4px}.positive{color:var(--green)}.negative{color:var(--red)}h2{font-size:18px;margin:0 0 12px}h3{font-size:14px;margin:0 0 9px}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.sectionhead h2{margin:0}.muted{color:var(--muted);font-size:12px;line-height:1.5}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}label{font-size:12px;color:var(--muted)}input,select,textarea{width:100%;font:inherit;color:var(--ink);background:white;border:1px solid #d8dfe7;border-radius:11px;padding:11px;min-width:0}input[type=checkbox]{width:19px;height:19px;accent-color:var(--navy)}.checkrow{display:flex;align-items:center;gap:8px;font-size:13px}.rowitem{border:1px solid var(--line);border-radius:14px;padding:12px;margin:9px 0;background:#fff}.rowtop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.rowname{font-weight:700;font-size:14px;overflow-wrap:anywhere}.rowmeta{font-size:11px;color:var(--muted);margin-top:4px}.amount{font-weight:750;white-space:nowrap}.actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.status{font-size:11px;padding:4px 8px;border-radius:999px;background:#fff3d7;color:#825c00;display:inline-block}.status.done{background:#e1f5e9;color:#14653f}.empty{padding:20px;text-align:center;color:var(--muted);font-size:13px}.divider{height:1px;background:var(--line);margin:13px 0}.notice{padding:12px;border-radius:13px;background:#fff7e5;border:1px solid #f0dfb7;font-size:12px;line-height:1.5;color:#604b1b;margin-bottom:12px}.hidden{display:none!important}.bar{height:8px;border-radius:999px;background:#e9edf1;overflow:hidden;margin:8px 0}.bar span{display:block;height:100%;background:var(--gold);width:0}.monthline{display:grid;grid-template-columns:70px 1fr 92px;gap:8px;align-items:center;font-size:12px;margin:10px 0}.monthline .right{text-align:right;font-weight:700}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:8px}.footer{font-size:11px;color:var(--muted);text-align:center;padding:10px}
+@media(min-width:600px){main{padding:20px}.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.metric .value{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Control financiero doméstico</div>
+  <div class="headrow"><h1>Mi Dinero</h1><span id="cloudStatus">Solo en este dispositivo</span></div>
+  <div style="font-size:12px;color:#d5dce5;margin-top:7px">Tu economía, mes a mes.</div>
+</header>
+<main>
+  <div class="monthbar">
+    <button class="secondary" id="prevMonth" aria-label="Mes anterior">‹</button>
+    <select id="monthSelect" class="pill" aria-label="Seleccionar mes"></select>
+    <select id="yearSelect" class="pill" aria-label="Seleccionar año" style="max-width:105px"></select>
+    <button class="secondary" id="nextMonth" aria-label="Mes siguiente">›</button>
+  </div>
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-tab="home">Resumen</button><button class="tab" data-tab="transactions">Movimientos</button><button class="tab" data-tab="debts">Deudas</button><button class="tab" data-tab="savings">Ahorro</button><button class="tab" data-tab="annual">Año</button><button class="tab" data-tab="settings">Ajustes y copias</button>
+  </div>
+  <div id="view"></div>
+  <div class="footer">Mi Dinero · Prototipo privado · Revisa siempre el saldo con tu banco.</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+</body>
+</html>
