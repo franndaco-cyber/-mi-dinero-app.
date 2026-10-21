@@ -34,3 +34,4 @@ La sincronización Supabase es una copia de seguridad del estado completo de la 
 - El cierre guarda una fotografía del saldo previsto; reabrir permite corregirlo.
 - La primera versión mantiene movimientos en un único estado local y la nube guarda una copia del conjunto. No ofrece resolución avanzada de conflictos entre varios dispositivos.
 - Antes de introducir datos muy sensibles, valida la configuración de autenticación, RLS y copias de seguridad.
+Actualización de publicación.
